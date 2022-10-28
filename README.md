@@ -1,65 +1,33 @@
-# Copilot.vim
+# Copilot
 
 GitHub Copilot uses OpenAI Codex to suggest code and entire functions in
-real-time right from your editor.  Trained on billions of lines of public
+real-time right from your editor. Trained on billions of lines of public
 code, GitHub Copilot turns natural language prompts including comments and
 method names into coding suggestions across dozens of languages.
-
-Copilot.vim is a Vim/Neovim plugin for GitHub Copilot.
 
 To learn more, visit
 [github.com/features/copilot](https://github.com/features/copilot).
 
-## Subscription
+## Objective
 
-GitHub Copilot requires a subscription.  It is free for verified students and
-maintainers of popular open source projects on GitHub.
+This repo collects bindings of Copilot to various languages.
 
-GitHub Copilot is subject to the [GitHub Additional Product
-Terms](https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features).
+The current supported language bindings are:
 
-## Getting started
+- [Python](bindings/python)
 
-1.  Install [Neovim][] or the latest patch of [Vim][] (9.0.0185 or newer).
+The goal is to provide a programmable interface to Copilot, so that automated tools can be built on top of it.
 
-2.  Install [Node.js][] version 16.  (Other versions should work too, except
-    Node 18 which isn't supported yet.)
+Bindings for different languages are provided in separate subdirectories of [bindings](bindings).
 
-3.  Install `github/copilot.vim` using vim-plug, packer.nvim, or any other
-    plugin manager.  Or to install manually, run one of the following
-    commands:
+## Usage
 
-    * Vim, Linux/macOS:
+Please refer to the README in each language binding for usage instructions.
 
-          git clone https://github.com/github/copilot.vim.git \
-            ~/.vim/pack/github/start/copilot.vim
+## Technology behind
 
-    * Neovim, Linux/macOS:
+The binding to Copilot leverages the [LSP](https://microsoft.github.io/language-server-protocol/) of Copilot that is
+originally provided by [copilot.vim](https://github.com/github/copilot.vim).
 
-          git clone https://github.com/github/copilot.vim.git \
-            ~/.config/nvim/pack/github/start/copilot.vim
+The binding is implemented as a service that acts as a client to the Copilot's LSP server.
 
-    * Vim, Windows (PowerShell command):
-
-          git clone https://github.com/github/copilot.vim.git `
-            $HOME/vimfiles/pack/github/start/copilot.vim
-
-    * Neovim, Windows (PowerShell command):
-
-          git clone https://github.com/github/copilot.vim.git `
-            $HOME/AppData/Local/nvim/pack/github/start/copilot.vim
-
-4.  Start Neovim and invoke `:Copilot setup`.
-
-[Node.js]: https://nodejs.org/en/download/
-[Neovim]: https://github.com/neovim/neovim/releases/latest
-[Vim]: https://github.com/vim/vim
-
-Suggestions are displayed inline and can be accepted by pressing the tab key.
-See `:help copilot` for more information.
-
-## Troubleshooting
-
-We’d love to get your help in making GitHub Copilot better!  If you have
-feedback or encounter any problems, please reach out on our [Feedback
-forum](https://github.com/github-community/community/discussions/categories/copilot).
