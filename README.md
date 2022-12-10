@@ -6,7 +6,7 @@ code, GitHub Copilot turns natural language prompts including comments and
 method names into coding suggestions across dozens of languages.
 
 To learn more, visit
-[github.com/features/copilot](https://github.com/features/copilot).
+[https://github.com/features/copilot](https://github.com/features/copilot).
 
 ## Objective
 
